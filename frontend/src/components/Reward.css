@@ -1,0 +1,185 @@
+/* === Rewards Section Wrapper === */
+.rewards-section {
+  margin-top: 2rem;
+  padding: 1.5rem;
+  background-color: #f0f4ff;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+body.dark .rewards-section {
+  background-color: #2a2a2a;
+}
+
+.rewards-section h3 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  color: #007bff;
+}
+
+/* === Grid Layout for Reward Cards === */
+.rewards-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  justify-content: center;
+  align-items: stretch;
+}
+
+/* === Reward Card Styling === */
+.reward-card {
+  background: #ffffff;
+  color: #333;
+  padding: 12px 16px;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  font-weight: bold;
+  text-align: center;
+  flex: 1 1 180px;
+  max-width: 220px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: default;
+}
+
+.reward-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 12px rgba(0, 128, 255, 0.2);
+}
+
+body.dark .reward-card {
+  background-color: #333;
+  color: #fff;
+  box-shadow: 0 2px 6px rgba(255, 255, 255, 0.05);
+}
+
+/* === Reward Icon Base === */
+.reward-icon {
+  width: 32px;
+  height: 32px;
+  margin: 0 auto 8px;
+  position: relative;
+  transition: transform 0.3s ease;
+}
+
+/* === Trophy Icon === */
+.reward-icon.trophy {
+  background: gold;
+  width: 24px;
+  height: 16px;
+  border-radius: 4px 4px 0 0;
+  margin-top: 6px;
+}
+.reward-icon.trophy::before,
+.reward-icon.trophy::after {
+  content: "";
+  position: absolute;
+  top: -6px;
+  width: 8px;
+  height: 12px;
+  border: 2px solid gold;
+  border-radius: 50%;
+}
+.reward-icon.trophy::before {
+  left: -8px;
+}
+.reward-icon.trophy::after {
+  right: -8px;
+}
+
+/* === Medal Icon === */
+.reward-icon.medal {
+  background: radial-gradient(circle, #ffdd57 40%, #ffb400 60%);
+  border-radius: 50%;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+.reward-icon.medal::before,
+.reward-icon.medal::after {
+  content: "";
+  position: absolute;
+  top: 30px;
+  width: 8px;
+  height: 16px;
+  background: #5a3e85;
+  border-radius: 2px;
+}
+.reward-icon.medal::before {
+  left: 4px;
+}
+.reward-icon.medal::after {
+  right: 4px;
+}
+
+/* === Megaphone Icon === */
+.reward-icon.megaphone {
+  width: 0;
+  height: 0;
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+  border-left: 16px solid #28a745;
+}
+.reward-icon.megaphone::after {
+  content: "";
+  position: absolute;
+  top: 6px;
+  left: 14px;
+  width: 4px;
+  height: 8px;
+  background: #28a745;
+}
+
+/* === Giftbox Icon === */
+.reward-icon.giftbox {
+  background: #ff5722;
+  width: 24px;
+  height: 20px;
+  border-radius: 2px;
+}
+.reward-icon.giftbox::before {
+  content: "";
+  position: absolute;
+  top: -6px;
+  left: 0;
+  width: 24px;
+  height: 6px;
+  background: #ffc107;
+}
+.reward-icon.giftbox::after {
+  content: "";
+  position: absolute;
+  top: -6px;
+  left: 10px;
+  width: 4px;
+  height: 26px;
+  background: #ffc107;
+}
+
+/* === Rocket Icon with Flame === */
+.reward-icon.rocket {
+  background: linear-gradient(to top, #6f42c1, #9c6ff2);
+  width: 16px;
+  height: 32px;
+  border-radius: 50% 50% 0 0;
+}
+.reward-icon.rocket::before {
+  content: "";
+  position: absolute;
+  top: 28px;
+  left: 4px;
+  width: 8px;
+  height: 8px;
+  background: orange;
+  border-radius: 50%;
+  box-shadow: 0 0 6px 2px rgba(255, 140, 0, 0.6);
+  animation: flame 0.4s infinite ease-in-out alternate;
+}
+
+@keyframes flame {
+  0% {
+    transform: scale(1) translateY(0);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1.2) translateY(2px);
+    opacity: 0.7;
+  }
+}

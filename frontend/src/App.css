@@ -1,0 +1,128 @@
+body {
+  margin: 0;
+  width:100%;
+  font-family: "Segoe UI", "Inter", sans-serif;
+  background-image: url("./bg.jpeg"); 
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed; 
+  background-size: cover;
+  color: #222;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+body.dark {
+  background-image: url("./bg-dark.png");  
+  /* background-color: #121212; */
+  color: #f1f1f1;
+  backdrop-filter: brightness(0.8); /* Slight darkening */
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.2); /* optional dark overlay */
+  z-index: -1;
+}
+
+
+.container {
+  max-width: 900px;
+  margin: 2rem auto;
+  padding: 1.5rem;
+  background-color: rgba(255, 255, 255, 0.15); /* Semi-transparent */
+  backdrop-filter: blur(8px); /* Frosted glass effect */
+  -webkit-backdrop-filter: blur(8px);
+  border-radius: 12px;
+  color: #000;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+body.dark .container {
+  background-color: rgba(30, 30, 30, 0.3); /* Dark frosted glass */
+  color: #f1f1f1;
+}
+
+
+body.dark input,
+body.dark select,
+body.dark .styled-table {
+  background-color: #2a2a2a;
+  color: #fff;
+  border-color: #444;
+}
+
+body.dark .btn {
+  color: white;
+}
+
+body.dark .btn.link {
+  background-color: #777;
+}
+
+.theme-toggle {
+  float: right;
+  padding: 6px 12px;
+  background-color: #888;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  margin-bottom: 1rem;
+  cursor: pointer;
+}
+
+.theme-toggle:hover {
+  background-color: #555;
+}
+button,
+input,
+select {
+  font-family: inherit;
+}
+
+button {
+  transition: all 0.3s ease;
+}
+@media (max-width: 768px) {
+  .container {
+    margin: 1rem;
+    padding: 1rem;
+  }
+
+  .search-bar {
+    flex-direction: column;
+    align-items: stretch;
+  }
+.entry-form input,
+  .search-bar input,
+  .search-bar select,
+  .theme-toggle,
+  .btn {
+    width: 100%;
+  }
+  .entry-form {
+    gap: 1rem;
+  }
+
+  .styled-table th,
+  .styled-table td {
+    font-size: 0.85rem;
+    padding: 8px;
+  }
+
+  .theme-toggle {
+    float: none;
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+   .pagination {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+}
