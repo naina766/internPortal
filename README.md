@@ -1,6 +1,6 @@
 # 🧑‍💼 Intern Portal – Full Stack MERN Project
 
-This is a basic **Full Stack Intern Portal** built using the **MERN stack** – MongoDB, Express.js, React.js, and Node.js. The portal displays intern information, referral codes, donation statistics, and rewards. An optional leaderboard is also included using dummy backend data.
+This is a basic **Full Stack Intern Portal** built using the **MERN stack** – MongoDB, Express.js, React.js, and Node.js. The portal displays intern information, referral codes, donation statistics, and rewards. An leaderboard is also included using backend data.
 
 ---
 
@@ -40,14 +40,14 @@ intern-portal/
 ## 🧩 Features
 
 ### Frontend (React):
-- ✅ Dummy Login/Signup page (UI only)
+- ✅ Login/Signup page 
 - ✅ Intern Dashboard:
   - Intern Name
   - Referral Code (e.g., `naina2025`)
   - Total Donations Raised
   - Static Rewards/Unlockables section
-- ✅ Leaderboard Page (Bonus):
-  - Dummy list of interns ranked by donation
+- ✅ Leaderboard Page :
+  - List of interns ranked by donation
 
 ### Backend (Express.js):
 - ✅ REST API with static/dummy JSON data
